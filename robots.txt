@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shikapenne.github.io/jumpscare-yoho/sitemap.xml
