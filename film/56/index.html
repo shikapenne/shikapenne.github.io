@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<!--META-->
+<title>着信アリのジャンプスケアはいつ？何分に来る？｜ジャンプスケア予報</title>
+<meta name="description" content="映画『着信アリ』で急に驚かされる場面（ジャンプスケア）がいつ来るかを、ネタバレなしで共有するページです。観た方の投稿を募集しています。">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://shikapenne.github.io/film/56/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ジャンプスケア予報">
+<meta property="og:title" content="着信アリのジャンプスケアはいつ来る？">
+<meta property="og:description" content="映画『着信アリ』で急に驚かされる場面（ジャンプスケア）がいつ来るかを、ネタバレなしで共有するページです。観た方の投稿を募集しています。">
+<meta property="og:url" content="https://shikapenne.github.io/film/56/">
+<meta property="og:image" content="https://shikapenne.github.io/og.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="着信アリのジャンプスケアはいつ来る？">
+<meta name="twitter:description" content="映画『着信アリ』で急に驚かされる場面（ジャンプスケア）がいつ来るかを、ネタバレなしで共有するページです。観た方の投稿を募集しています。">
+<meta name="twitter:image" content="https://shikapenne.github.io/og.png">
+<!--/META-->
+<link rel="icon" href="../../assets/favicon.ico" sizes="48x48">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<link rel="manifest" href="../../assets/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../../assets/app.css">
+</head>
+<body>
+<div class="wrap">
+  <!--HEADER-->
+  <header>
+    <p class="crumb"><a class="logo" href="../../"><img src="../../assets/logo.svg" alt="ジャンプスケア予報（トップへ）" width="558" height="80"></a></p>
+    <h1>着信アリ（2004）のジャンプスケア</h1>
+    <p>『着信アリ』で急に驚かされる場面の情報は、まだありません。観た方は「いつ」来たかを教えてください。</p>
+    <ul class="rules">
+      <li>何が出るかは書かない</li>
+      <li>誰が・どうなるかも書かない</li>
+      <li>直前の目印だけを書く</li>
+    </ul>
+  </header>
+  <!--/HEADER-->
+
+  <div class="authbar" id="authbar">
+    <span id="authstate">読み込み中…</span>
+    <span class="authbtns" id="authbtns"></span>
+  </div>
+  <div class="loginbox" id="loginbox" hidden>
+    <p id="login-why">投稿はログインなしでもできます。Googleでログインすると「通報」ができ、別の端末からも自分の投稿を管理できます。</p>
+    <p id="login-soon">ログイン機能はただいま準備中です。もうしばらくお待ちください。</p>
+    <div class="reqrow" id="google-row" hidden>
+      <button class="btn" type="button" id="login-google">Googleでログイン</button>
+    </div>
+    <span class="msg" id="login-msg" role="status"></span>
+  </div>
+
+  <section class="now" aria-label="公開中の作品">
+    <div class="nowhead"><h2>いま公開中</h2><small id="nowmeta">読み込み中…</small></div>
+    <div class="shelf" id="shelf"></div>
+    <div class="filterchip" id="chip" hidden><span id="chiptext"></span><button class="ghost" type="button" id="clearq">絞り込みを解除</button></div>
+  </section>
+
+  <div class="banned" id="bannedbox" hidden>このアカウントは利用ルールに反する投稿があったため、投稿できなくなっています。</div>
+
+  <details class="add" id="addbox">
+    <summary>場面を投稿する</summary>
+    <form id="form" novalidate>
+      <div class="field c4 combo"><label for="f-movie">作品名</label>
+        <input id="f-movie" required maxlength="80" placeholder="作品名で検索" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="f-results" aria-autocomplete="list">
+        <ul class="results" id="f-results" role="listbox" hidden></ul>
+        <small id="f-movie-note">候補から選んでください。見つからない作品も、そのまま作品名を入れれば投稿できます。</small></div>
+      <div class="field c2" id="yearfield" hidden><span class="lab">公開年</span><span id="f-year" class="yearval"></span></div>
+      <div class="field c2" id="newyearfield" hidden><label for="f-newyear">公開年（わかれば）</label><input id="f-newyear" maxlength="4" inputmode="numeric" placeholder="例：2019"></div>
+      <p class="field c6 newnote" id="newnote" hidden>まだ登録されていない作品です。このまま投稿でき、投稿のあとで作品が実在するかを確認します。</p>
+      <div class="field c6"><span class="lab">いつ来る？</span>
+        <div class="seg" role="radiogroup" aria-label="いつ来るか">
+          <label><input type="radio" name="when" value="time" id="f-w0" checked><span>時間で入力</span></label>
+          <label><input type="radio" name="when" value="序盤" id="f-w1"><span>序盤</span></label>
+          <label><input type="radio" name="when" value="中盤" id="f-w2"><span>中盤</span></label>
+          <label><input type="radio" name="when" value="終盤" id="f-w3"><span>終盤</span></label>
+        </div><small>時間がわからなければ、序盤・中盤・終盤から選ぶだけでも大丈夫です。</small></div>
+      <div class="field c3" id="timebox"><label for="f-time">何分ごろ？</label><input id="f-time" placeholder="例：45" inputmode="numeric"><small>分だけでOKです（秒まで分かれば 1:02:15 のようにも書けます）</small></div>
+      <div class="field c3" id="accbox"><span class="lab">時間の正確さ</span>
+        <div class="seg">
+          <label><input type="radio" name="acc" value="exact" id="f-acc1"><span>正確（配信で確認）</span></label>
+          <label><input type="radio" name="acc" value="approx" id="f-acc2" checked><span>だいたい</span></label>
+        </div><small>映画館で観た場合は、だいたいでかまいません。</small></div>
+      <div class="field c4"><span class="lab">強さ</span>
+        <div class="seg" role="radiogroup" aria-label="強さ">
+          <label><input type="radio" name="lv" value="1" id="f-lv1"><span>ちょっと</span></label>
+          <label><input type="radio" name="lv" value="2" id="f-lv2" checked><span>けっこう</span></label>
+          <label><input type="radio" name="lv" value="3" id="f-lv3"><span>かなり</span></label>
+        </div></div>
+      <div class="field c6"><span class="lab">種類</span>
+        <div class="seg">
+          <label><input type="checkbox" name="kind" value="大きな音" id="f-k1"><span>大きな音</span></label>
+          <label><input type="checkbox" name="kind" value="急に映る" id="f-k2"><span>急に映る</span></label>
+          <label><input type="checkbox" name="kind" value="肩すかし" id="f-k3"><span>肩すかし（猫など）</span></label>
+          <label><input type="checkbox" name="kind" value="連続" id="f-k4"><span>連続で来る</span></label>
+        </div></div>
+      <div class="field c6"><label for="f-cue">直前の目印（ネタバレなしで）</label><textarea id="f-cue" rows="2" maxlength="120" placeholder="例：電話が鳴って、主人公が廊下に出たあと"></textarea><small>任意。誰が出るか・何が起きるかは書かないでください。</small></div>
+      <div class="formfoot"><button class="btn" id="submit" type="submit">投稿する</button><span class="msg" id="msg" role="status"></span></div>
+    </form>
+  </details>
+
+  <div class="tools">
+    <input type="search" id="q" placeholder="作品名で探す" aria-label="作品名で探す">
+    <label class="toggle"><input type="checkbox" id="showcue"> 目印を最初から表示</label>
+  </div>
+  <div class="legend"><span><i style="background:var(--lv1)"></i>ちょっと</span><span><i style="background:var(--lv2)"></i>けっこう</span><span><i style="background:var(--lv3)"></i>かなり</span><span>時刻は配信版・劇場版で数十秒ずれることがあります</span></div>
+
+  <div class="mutednote" id="mutednote" hidden><span id="mutedtext"></span><button class="ghost" type="button" id="unmute">すべて元に戻す</button></div>
+
+  <section class="mod" id="modpanel" hidden aria-label="管理">
+    <h2>管理（あなたにだけ表示）</h2>
+    <p>通報された投稿です。3件以上の通報があった投稿は、確認するまで全員に非表示になります。仮登録された作品は、作品名と公開年を確かめて「確認済みにする」を押してください。架空の作品なら「作品ごと削除」で投稿もまとめて消えます。BANしたアカウントは投稿できなくなり、過去の投稿も非表示になります。</p>
+    <ul id="modlist"></ul>
+    <h3>確認待ちの作品（仮登録）</h3>
+    <ul id="reqlist"></ul>
+    <h3>BAN中のアカウント</h3>
+    <ul id="banlist"></ul>
+  </section>
+
+  <section id="list" aria-live="polite"></section>
+
+  <footer>ネタバレだと思う投稿は「通報」してください。「この人を非表示」で、その人の投稿をあなたの画面から消せます。自分の投稿は削除できます。時刻は投稿者の視聴環境によるものです。「いま公開中」の作品リストは毎週金曜に更新します。<br><a href="../../privacy.html" style="color:inherit">プライバシーポリシー</a></footer>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>window.JSY={base:"../../",filmId:56};</script>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

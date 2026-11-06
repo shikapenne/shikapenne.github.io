@@ -1,0 +1,35 @@
+name: 作品ページを更新
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"   # 6時間ごと
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["index.html", "assets/**", "tools/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 作品ページを生成
+        run: python3 tools/build_pages.py
+      - name: 変更があればコミット
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A film 404.html sitemap.xml
+          if git diff --cached --quiet; then echo "変更なし"; exit 0; fi
+          git commit -m "作品ページを自動更新"
+          git push
